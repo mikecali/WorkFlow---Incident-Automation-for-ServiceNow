@@ -1,0 +1,8 @@
+POST /_bulk
+{ "index": { "_index": "aof-alerts" } }
+{ "recipe_id": "SYS019", "recipe_name": "REC | System Utilization Monitor", "job_id": "j-SYS001-TEST-B020", "recipe_domain": "[PROD] Infrastructure", "timestamp": "2026-02-24T11:16:00.000Z", "error_type": "Test Case Open", "error_message": "CPU utilization at 98% on host prod-app-server-01 for 10 consecutive minutes", "error_description": "Mike Did this Critical CPU spike detected on production application server", "severity_level": "1", "servicenow_ci": "SNSVC0006401", "alert_status": "fired", "alert_id": "ALT-B001" }
+
+
+POST /_bulk
+{ "index": { "_index": "aof-alerts" } }
+{ "recipe_id": "SYS019", "recipe_name": "REC | Mike Utilization Monitor", "job_id": "j-SYS001-TEST-B020", "recipe_domain": "[PROD] Infrastructure", "timestamp": "2026-02-24T11:17:50.000Z", "error_type": "Test Case Close", "error_message": "Mike did this CPU utilization returned to normal at 42% on prod-app-server-01", "error_description": "CPU spike resolved after auto-scaling added 2 additional nodes", "severity_level": "1", "servicenow_ci": "SNSVC0006401", "alert_status": "recovered", "alert_id": "ALT-B001" }
